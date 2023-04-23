@@ -1,0 +1,14 @@
+### ME
+GET http://localhost:5000/me
+
+### LOGIN
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email": "user@gmail.com",
+  "password": "12345"
+}
+
+### LOGOUT
+DELETE http://localhost:5000/logout

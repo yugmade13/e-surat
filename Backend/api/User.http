@@ -1,0 +1,30 @@
+### getUsers
+GET http://localhost:5000/users
+
+### getUserById
+GET http://localhost:5000/users/1d98b2fa-6c99-4dff-8c44-a6587851b815
+
+### createUser
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+  "email": "user@gmail.com",
+  "password": "12345",
+  "confirmPassword": "12345",
+  "status": "active",
+  "role": "user"
+}
+
+### updateUser
+PATCH http://localhost:5000/users/7039eb9d-8167-4daf-b06e-4a49b428fb01
+Content-Type: application/json
+
+{
+  "email": "user@gmail.com",
+  "status": "active",
+  "role": "user"
+}
+
+### deleteUser
+DELETE http://localhost:5000/users/7039eb9d-8167-4daf-b06e-4a49b428fb01
