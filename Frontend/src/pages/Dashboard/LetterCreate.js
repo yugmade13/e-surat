@@ -15,7 +15,7 @@ const LetterCreate = () => {
     const createLetter = async (event) => {
         event.preventDefault();
         try {
-            await axios.post("http://localhost:5000/letters", {
+            await axios.post("http://localhost:3300/letters", {
                 name: name
             });
 

@@ -34,7 +34,7 @@ const UserCreate = () => {
         event.preventDefault();
 
         try {
-            await axios.post("http://localhost:5000/users/register", {
+            await axios.post("http://localhost:3300/users/register", {
                 email,
                 password,
                 confirmPassword,

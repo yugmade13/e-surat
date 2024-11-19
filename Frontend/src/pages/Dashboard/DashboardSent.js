@@ -6,7 +6,7 @@ const DashboardSent = () => {
     const [orders, setOrders] = useState([]);
 
     const getOrders = async () => {
-        const response = await axios.get("http://localhost:5000/orders");
+        const response = await axios.get("http://localhost:3300/orders");
         return response.data;
     }
 

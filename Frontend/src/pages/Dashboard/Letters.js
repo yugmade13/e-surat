@@ -6,13 +6,13 @@ const Letters = () => {
     const [letters, setLetters] = useState([]);
 
     const getLetters = async () => {
-        const response = await axios.get("http://localhost:5000/letters");
+        const response = await axios.get("http://localhost:3300/letters");
         return response.data;
     }
 
     const deleteLetter = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/letters/${id}`);
+            await axios.delete(`http://localhost:3300/letters/${id}`);
 
             getLetters()
                 .then((letters) => setLetters(letters))

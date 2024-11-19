@@ -1,6 +1,6 @@
 import {Sequelize} from "sequelize";
 
-const Database = new Sequelize("desa_kadilangu", "root", "[your password]", {
+const Database = new Sequelize("desa_kadilangu", "root", "", {
    host: "localhost",
    dialect: "mysql",
    define: {

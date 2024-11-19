@@ -7,7 +7,7 @@ const Users = () => {
 
     const deleteUser = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/users/${id}`);
+            await axios.delete(`http://localhost:3300/users/${id}`);
 
             getUsers()
                 .then((users) => setUsers(users))
@@ -18,7 +18,7 @@ const Users = () => {
     }
 
     const getUsers = async () => {
-        const response = await axios.get("http://localhost:5000/profiles");
+        const response = await axios.get("http://localhost:3300/profiles");
         return response.data;
     }
 

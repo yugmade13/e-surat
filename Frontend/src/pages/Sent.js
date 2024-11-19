@@ -19,7 +19,7 @@ const Sent = () => {
     }, [navigate, user]);
 
     const getLetterRequest = async () => {
-        const response = await axios.get("http://localhost:5000/request-letters");
+        const response = await axios.get("http://localhost:3300/request-letters");
         return response.data;
     }
 

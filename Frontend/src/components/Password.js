@@ -15,7 +15,7 @@ const Password = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.patch(`http://localhost:5000/users/change-password/${user.id}`, {
+            const response = await axios.patch(`http://localhost:3300/users/change-password/${user.id}`, {
                 password,
                 confirmPassword
             });

@@ -28,7 +28,7 @@ const SentEdit = () => {
     const [someone, setSomeone] = useState("");
 
     const getUserIdWithProfile = async (id) => {
-        const response = await axios.get(`http://localhost:5000/users-profile/${id}`);
+        const response = await axios.get(`http://localhost:3300/users-profile/${id}`);
         setEmail(response.data.user.email);
         setNoKK(response.data.no_kk);
         setNik(response.data.nik);
@@ -45,14 +45,14 @@ const SentEdit = () => {
     }
 
     const getUserRequestToEveryone = async (id) => {
-        const response = await axios.get(`http://localhost:5000/users-profile/${id}`);
+        const response = await axios.get(`http://localhost:3300/users-profile/${id}`);
         setName(response.data.name);
         setEmail(response.data.user.email);
     }
 
     const getLetter = async (id) => {
         try {
-            const response = await axios.get(`http://localhost:5000/letters/${id}`)
+            const response = await axios.get(`http://localhost:3300/letters/${id}`)
             setLetter(response.data.name);
         } catch (error) {
             console.log(error.message)
@@ -60,17 +60,17 @@ const SentEdit = () => {
     }
 
     const getRequestToEveryone = async (id) => {
-        const response = await axios.get(`http://localhost:5000/request-to-everyone/${id}`);
+        const response = await axios.get(`http://localhost:3300/request-to-everyone/${id}`);
         return response.data;
     }
 
     const getLetterById = async (id) => {
-        const response = await axios.get(`http://localhost:5000/request-letters/${id}`);
+        const response = await axios.get(`http://localhost:3300/request-letters/${id}`);
         return response.data;
     }
 
     const getOrderById = async () => {
-        const response = await axios.get(`http://localhost:5000/orders/${id}`);
+        const response = await axios.get(`http://localhost:3300/orders/${id}`);
         return response.data;
     }
 

@@ -7,7 +7,7 @@ const Report = () => {
 
     const getReport = async () => {
         try {
-            const response = await axios.post("http://localhost:5000/letter-request-month", {
+            const response = await axios.post("http://localhost:3300/letter-request-month", {
                 fromDate,
                 toDate
             });
@@ -25,7 +25,7 @@ const Report = () => {
                 if (data.message === "Data kosong") {
                     console.log("Tanggal masih kosong")
                 } else {
-                    window.open(`http://localhost:5000/${data.message}`);
+                    window.open(`http://localhost:3300/${data.message}`);
                 }
             })
             .catch((error) => console.log(error))

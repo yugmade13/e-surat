@@ -25,7 +25,7 @@ const Account = () => {
     const [toggle, setToggle] = useState(false);
 
     const getUserProfile = async () => {
-        const response = await axios.get(`http://localhost:5000/profiles/${user.id}`);
+        const response = await axios.get(`http://localhost:3300/profiles/${user.id}`);
         return response.data;
     }
 
@@ -51,7 +51,7 @@ const Account = () => {
     const onUpdate = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.patch(`http://localhost:5000/profiles/${user.id}`, {
+            const response = await axios.patch(`http://localhost:3300/profiles/${user.id}`, {
                 noKK,
                 nik,
                 name,

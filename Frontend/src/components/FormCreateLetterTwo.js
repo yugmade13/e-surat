@@ -27,7 +27,7 @@ const FormCreateLetterTwo = () => {
     const [note, setNote] = useState("");
 
     const getLetters = async () => {
-        const response = await axios.get("http://localhost:5000/letters");
+        const response = await axios.get("http://localhost:3300/letters");
         return response.data;
     }
 
@@ -40,7 +40,7 @@ const FormCreateLetterTwo = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post("http://localhost:5000/request-letters/everyone", {
+            const response = await axios.post("http://localhost:3300/request-letters/everyone", {
                 user_id: user.id,
                 letterID,
                 noKK,

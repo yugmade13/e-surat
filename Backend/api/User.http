@@ -1,11 +1,11 @@
 ### getUsers
-GET http://localhost:5000/users
+GET http://localhost:3300/users
 
 ### getUserById
-GET http://localhost:5000/users/1d98b2fa-6c99-4dff-8c44-a6587851b815
+GET http://localhost:3300/users/1d98b2fa-6c99-4dff-8c44-a6587851b815
 
 ### createUser
-POST http://localhost:5000/users
+POST http://localhost:3300/users
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 }
 
 ### updateUser
-PATCH http://localhost:5000/users/7039eb9d-8167-4daf-b06e-4a49b428fb01
+PATCH http://localhost:3300/users/7039eb9d-8167-4daf-b06e-4a49b428fb01
 Content-Type: application/json
 
 {
@@ -27,4 +27,4 @@ Content-Type: application/json
 }
 
 ### deleteUser
-DELETE http://localhost:5000/users/7039eb9d-8167-4daf-b06e-4a49b428fb01
+DELETE http://localhost:3300/users/7039eb9d-8167-4daf-b06e-4a49b428fb01

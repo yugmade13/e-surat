@@ -37,7 +37,7 @@ const SentDetail = () => {
         dispatch(setLoading(true));
 
         try {
-            const response = await axios.post("http://localhost:5000/orders/develop", {
+            const response = await axios.post("http://localhost:3300/orders/develop", {
                 someone,
                 id,
                 letterID,
@@ -65,14 +65,14 @@ const SentDetail = () => {
     }
 
     const getUserRequestToEveryone = async (id) => {
-        const response = await axios.get(`http://localhost:5000/users-profile/${id}`);
+        const response = await axios.get(`http://localhost:3300/users-profile/${id}`);
         setName(response.data.name);
         setEmail(response.data.user.email);
         setUserID(response.data.user.id);
     }
 
     const getUserIdWithProfile = async (id) => {
-        const response = await axios.get(`http://localhost:5000/users-profile/${id}`);
+        const response = await axios.get(`http://localhost:3300/users-profile/${id}`);
         setUserID(response.data.user.id);
         setEmail(response.data.user.email);
         setNoKK(response.data.no_kk);
@@ -91,7 +91,7 @@ const SentDetail = () => {
 
     const getLetter = async (id) => {
         try {
-            const response = await axios.get(`http://localhost:5000/letters/${id}`)
+            const response = await axios.get(`http://localhost:3300/letters/${id}`)
             setLetter(response.data.name);
             setLetterID(response.data.id);
         } catch (error) {
@@ -100,12 +100,12 @@ const SentDetail = () => {
     }
 
     const getRequestToEveryone = async () => {
-        const response = await axios.get(`http://localhost:5000/request-to-everyone/${id}`);
+        const response = await axios.get(`http://localhost:3300/request-to-everyone/${id}`);
         return response.data;
     }
 
     const getLetterById = async () => {
-        const response = await axios.get(`http://localhost:5000/request-letters/${id}`);
+        const response = await axios.get(`http://localhost:3300/request-letters/${id}`);
         return response.data;
     }
 

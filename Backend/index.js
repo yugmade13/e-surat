@@ -40,12 +40,12 @@ App.use(session({
         secure: "auto",
         maxAge: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours})
     },
+    resave: true,
+    saveUninitialized: true
 }));
 
-App.use(cors({
-    credentials: true,
-    origin: "http://localhost:3000"
-}));
+App.use(cors());
+
 App.use(express.json());
 App.use(fileUpload());
 App.use(express.static("public"));
@@ -62,7 +62,7 @@ App.use(RoutesCounter);
 
 // store.sync();
 
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 3300
 App.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 })

@@ -14,7 +14,7 @@ const LetterEdit = () => {
     const {isAlertError, alertMessage} = useSelector((state) => state.alert);
 
     const getLetterById = async () => {
-        const response = await axios.get(`http://localhost:5000/letters/${id}`);
+        const response = await axios.get(`http://localhost:3300/letters/${id}`);
         return response.data;
     }
 
@@ -27,7 +27,7 @@ const LetterEdit = () => {
     const updateLetter = async (event) => {
         event.preventDefault();
         try {
-            await axios.patch(`http://localhost:5000/letters/${id}`, {
+            await axios.patch(`http://localhost:3300/letters/${id}`, {
                 name: name
             });
 

@@ -33,7 +33,7 @@ const UserProfile = () => {
         }
 
         try {
-            await axios.patch(`http://localhost:5000/users/${id}`, {
+            await axios.patch(`http://localhost:3300/users/${id}`, {
                 email,
                 role,
                 status: statusUser
@@ -46,7 +46,7 @@ const UserProfile = () => {
     }
 
     const getUserProfiles = async () => {
-        const response = await axios.get(`http://localhost:5000/profiles/${id}`);
+        const response = await axios.get(`http://localhost:3300/profiles/${id}`);
         return response.data;
     }
 
